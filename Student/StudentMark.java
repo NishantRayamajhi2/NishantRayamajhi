@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**
  * Write a description of class StudentMark here.
@@ -5,29 +6,22 @@
  * @Nishant Rayamajhi
  * @version (a version number or a date)
  */
-public class StudentMark
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class StudentMark
-     */
-    public StudentMark()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+public class StudentMark {
+    public static void main(String[] args) {
+        int numberOfStudents = 30;
+        float[] marks = new float[numberOfStudents];
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give marks for 30 students");
+        
+        for (int i = 0; i < numberOfStudents; i++) {
+            System.out.print("Enter mark for student " + (i + 1) + ": ");
+            marks[i] = scanner.nextFloat();
+        }
+        
+        System.out.println("Entered marks:");
+        for (float mark : marks) {
+            System.out.println(mark);
+        }
+        
     }
 }
