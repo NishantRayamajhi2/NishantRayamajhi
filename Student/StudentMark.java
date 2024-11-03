@@ -12,7 +12,7 @@ public class StudentMark {
         float[] marks = new float[numberOfStudents];
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give marks for 30 students");
-        
+        float mean =0;
         for (int i = 0; i < numberOfStudents; i++) {
             System.out.print("Enter mark for student " + (i + 1) + ": ");
             marks[i] = scanner.nextFloat();
@@ -22,6 +22,8 @@ public class StudentMark {
         for (float mark : marks) {
             System.out.println(mark);
         }
-        
+        mean=total/numberOfStudents;
+            System.out.printIn(mean);
+            
     }
 }
