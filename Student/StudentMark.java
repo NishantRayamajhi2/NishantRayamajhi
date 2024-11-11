@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * Write a description of class StudentMark here.
  *
@@ -20,7 +18,7 @@ public class StudentMark {
         ArrayList<Double> marks = new ArrayList<>();
         int numStudents = 30;
         
-        // Collect marks for 30 students
+        // Collect marks for the 30 students
         for (int i = 0; i < numStudents; i++) {
             while (true) {
                 System.out.print("Enter mark for student " + (i + 1) + " (0-30): ");
@@ -29,16 +27,16 @@ public class StudentMark {
                     marks.add(mark);
                     break;
                 } else {
-                    System.out.println("Error: Mark must be between 0 and 30. Please re-enter.");
+                    System.out.println("Error: Mark must be between 0 and 30. Please re-enter the marks.");
                 }
             }
         }
         
-        // Display assignment name and marks
+        // Display assignment name and marks of students
         System.out.println("\nAssignment: " + assignmentName);
         System.out.println("Marks: " + marks);
         
-        // Algorithm 1: Find highest and lowest mark
+        // Algorithm 1: Find highest and lowest marks
         double highestMark = marks.get(0);
         double lowestMark = marks.get(0);
         for (double mark : marks) {
@@ -58,16 +56,13 @@ public class StudentMark {
             total += mark;
         }
         double mean = total / marks.size();
-        
         double sumOfSquares = 0;
         for (double mark : marks) {
             sumOfSquares += Math.pow(mark - mean, 2);
         }
         double standardDeviation = Math.sqrt(sumOfSquares / marks.size());
-        
         System.out.println("The mean is: " + mean);
-        System.out.println("The standard deviation is: " + standardDeviation);
-        
+        System.out.println("The standard deviation is: " + standardDeviation); 
         input.close();
     }
 }
